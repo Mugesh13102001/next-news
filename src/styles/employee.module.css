@@ -1,23 +1,30 @@
-.main{
-    flex:1;
-    display:flex;
-    align-items:center;
-    flex-direction:column;
-
-    margin-top:50px;
+.main {
+  display:flex-end;
+  align-items:center;
+  
+  padding: 1.25rem 2rem;
+  gap: 1rem;
+  
+}
+.contactItem{
+  background-color: #f3f4f6;
+  padding: 1.25rem 2rem;
+  border-radius: 8px;
+  margin: 1rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #1f2937;
+  transition: background-color 0.2s ease;
 }
 
-.employeeOfTheMonth {
-    text-align:center;
-
+.contactItem:hover {
+  background-color: #e5e7eb;
 }
-.employeeOfTheMonth img 
-{
-  width: 100%;
-  height:auto;
-  max-height:300px;
-  aspect-ratio: 1/1;
-  object-fit:cover;
-  border-radius:50%;
-  margin: 0 auto;
+
+.contactItem img,
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }

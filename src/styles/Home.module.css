@@ -1,14 +1,69 @@
-.main {
+.pageContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;       /* center horizontally */
-  justify-content: center;   /* center vertically */
-  height: 100vh;             /* full viewport height */
 }
 
-.main h1{
-  margin-top:50px;
+/* Main layout of the section */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
-.main h3{
-  margin-top:50px;
+
+/* Text content */
+.main h1 {
+  flex: 1;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.main h3 {
+  flex: 1;
+  font-size: 1.3rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+/* Image occupying the right side */
+.imageContainer {
+  flex: 1;
+  position: relative;
+  height: 100%; /* Ensure the image container takes up the remaining space */
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto; /* Adjust the image height according to its aspect ratio */
+  max-height: 100%; /* Limit height to avoid excessive stretching */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  border-radius: 12px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+  }
+
+  /* Image size adjustments for smaller screens */
+  .imageContainer {
+    width: 100%;
+    height: 250px;
+    margin-top: 2rem;
+  }
+
+  .imageContainer img {
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -1,19 +1,34 @@
 import styles from "../src/styles/Toolbar.module.css";
-
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 export const Toolbar = () => {
   const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className={styles.main}>
-      <div onClick={() => router.push("/")}>Home</div>
-      <div onClick={() => router.push("/feed/1")}>NewsFeed</div>
-      <div onClick={() => router.push("/bronzeperformer")}>Bronze Performer</div>
-      <div onClick={() => window.location.href = "https://www.instagram.com/"}>
-         Instagram
+      <h1 className={styles.logo}>URBANLY.</h1>
+
+      {/* Hamburger icon */}
+      <div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      
+
+      {/* Nav items */}
+      <div className={`${styles.navItems} ${menuOpen ? styles.show : ""}`}>
+        <div onClick={() => router.push("/")} className={styles.link}>Home</div>
+        <div onClick={() => router.push("/feed/1")} className={styles.link}>News Feed</div>
+        <div onClick={() => router.push("/bronzeperformer")} className={styles.link}>Contact</div>
+        <div
+          onClick={() => window.location.href = "https://www.instagram.com/"}
+          className={styles.link}
+        >
+          Instagram
+        </div>
+      </div>
     </div>
   );
 };
