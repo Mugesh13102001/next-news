@@ -23,10 +23,10 @@ export const Toolbar = () => {
         <div onClick={() => router.push("/feed/1")} className={styles.link}>News Feed</div>
         <div onClick={() => router.push("/bronzeperformer")} className={styles.link}>Contact</div>
         <div
-          onClick={() => window.location.href = "https://www.instagram.com/"}
+          onClick={() => window.location.href = ""}
           className={styles.link}
         >
-          Instagram
+         Feedback
         </div>
       </div>
     </div>
