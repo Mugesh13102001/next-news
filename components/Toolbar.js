@@ -13,7 +13,7 @@ export const Toolbar = () => {
       <div onClick={() => window.location.href = "https://www.instagram.com/"}>
          Instagram
       </div>
-      <div onClick={()=> router.push("/error")}>Error 404 testing</div>
+      
     </div>
   );
 };

@@ -10,7 +10,7 @@ export default function Home() {
 
     <Toolbar />
     <div className={styles.main}>
-      <h1>Sunrise News App</h1>
+      <h1> News Feed App</h1>
 
 
       <h3>Buckle Up for the fast news deliveries</h3>
